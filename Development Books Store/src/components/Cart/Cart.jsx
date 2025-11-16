@@ -5,7 +5,7 @@ const Cart = ({ cart }) => {
 	return (
 		<>
 			<h2>Cart</h2>
-			{bookCount === 0 && <h6>The Cart is Empty...</h6>}
+			{bookCount === 0 && <h4>The Cart is Empty...</h4>}
 		</>
 	);
 };
