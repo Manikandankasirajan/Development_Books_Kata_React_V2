@@ -19,7 +19,7 @@ const App = () => {
 	return (
 		<>
 			<BrowserRouter>
-				<NavBar />
+				<NavBar quantity={cart.length} />
 				<Routes>
 					<Route
 						path="/"
