@@ -31,7 +31,7 @@ const App = () => {
 							/>
 						}
 					/>
-					<Route path="/cart" element={<Cart cart={[]} />} />
+					<Route path="/cart" element={<Cart cart={cart} />} />
 				</Routes>
 			</BrowserRouter>
 		</>
