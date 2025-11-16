@@ -46,4 +46,19 @@ describe("test cases for product component", () => {
 		const bookPrice = screen.getByRole("heading", { level: 4 });
 		expect(bookPrice).toBeInTheDocument();
 	});
+
+	it("should render add to cart button", () => {
+		const btnLabel = ["-", "+"];
+		render(<Product book={book} />);
+		const btns = screen.getAllByRole("button");
+		btns.forEach((btn, index) => {
+			expect(btn).toBeInTheDocument();
+			expect(btn).toHaveTextContent(btnLabel[index]);
+		});
+	});
+	it("should render book Quantity", () => {
+		render(<Product book={book} />);
+		const quantity = screen.getByRole("heading", { level: 6 });
+		expect(quantity).toBeInTheDocument();
+	});
 });

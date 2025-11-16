@@ -11,6 +11,11 @@ const Product = ({ book }) => {
 						: book.title}
 				</h2>
 				<h4 className="h4rice">&#x20b9; {book.price}</h4>
+				<div className="btnContainer">
+					<button className="btn">-</button>
+					<h6 className="quantity">0</h6>
+					<button className="btn">+</button>
+				</div>
 			</div>
 		</>
 	);
