@@ -1,8 +1,9 @@
 import React from "react";
 import { BOOK_LIST } from "../../data/constants";
 import Product from "../Product/Product";
+import "./productList.css";
 
-const ProductsList = () => {
+const ProductsList = ({ cart, addItemToCart, removeItemItemFromCart }) => {
 	return (
 		<>
 			<h2>Books Available</h2>
@@ -11,7 +12,12 @@ const ProductsList = () => {
 					{BOOK_LIST.map((book) => {
 						return (
 							<li key={book.id}>
-								<Product book={book} />
+								<Product
+									book={book}
+									cart={cart}
+									addItemToCart={addItemToCart}
+									removeItemItemFromCart={removeItemItemFromCart}
+								/>
 							</li>
 						);
 					})}
