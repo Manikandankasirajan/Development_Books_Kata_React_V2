@@ -12,7 +12,7 @@ describe("test cases for cart component", () => {
 	it("should render cart empty when cart has no books", () => {
 		const cart = [];
 		render(<Cart cart={cart} />);
-		expect(screen.getByRole("heading", { level: 6 })).toHaveTextContent(
+		expect(screen.getByRole("heading", { level: 4 })).toHaveTextContent(
 			/the cart is empty/i
 		);
 	});

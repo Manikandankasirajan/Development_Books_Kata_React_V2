@@ -6,7 +6,7 @@ import "./productList.css";
 const ProductsList = ({ cart, addItemToCart, removeItemItemFromCart }) => {
 	return (
 		<>
-			<h2>Books Available</h2>
+			<h1>Books Available</h1>
 			<div className="container">
 				<ul className="productsContainer">
 					{BOOK_LIST.map((book) => {

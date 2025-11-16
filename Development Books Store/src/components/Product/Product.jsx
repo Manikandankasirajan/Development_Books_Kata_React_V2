@@ -21,7 +21,7 @@ const Product = ({ book, cart, addItemToCart, removeItemItemFromCart }) => {
 						disabled={!bookTitleAndCountMap[book.title]}>
 						-
 					</button>
-					<h4 className="quantity">{bookTitleAndCountMap[book.title] || 0}</h4>
+					<h3 className="quantity">{bookTitleAndCountMap[book.title] || 0}</h3>
 					<button className="btn" onClick={() => addItemToCart(book.title)}>
 						+
 					</button>

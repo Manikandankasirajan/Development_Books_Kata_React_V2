@@ -12,14 +12,16 @@ describe("test cases for product component", () => {
 		imgSrc: "../src/assets/Kata_DevelopmentBooks_CleanCode.png",
 	};
 
+	const cart = ["Clean Code", "Working Effectively With Legacy Code"];
+
 	it("should render product image", () => {
-		render(<Product book={book} />);
+		render(<Product book={book} cart={cart} />);
 		const image = screen.getByRole("img");
 		expect(image).toBeInTheDocument();
 		expect(image).toHaveAttribute("src", book.imgSrc);
 	});
 	it("should render full book title when charector is with in the limit ", () => {
-		render(<Product book={book} />);
+		render(<Product book={book} cart={cart} />);
 		const heading = screen.getByRole("heading", { level: 2 });
 		expect(heading).toBeInTheDocument();
 		expect(heading).toHaveTextContent(book.title);
@@ -36,20 +38,20 @@ describe("test cases for product component", () => {
 
 	it("should render truncated book title when charector excedes the limit", () => {
 		const truncatedTitle = book2.title.slice(0, 15) + "...";
-		render(<Product book={book2} />);
+		render(<Product book={book2} cart={cart} />);
 		const heading = screen.getByRole("heading", { level: 2 });
 		expect(heading).toHaveTextContent(truncatedTitle);
 	});
 
 	it("should render price of the book", () => {
-		render(<Product book={book} />);
+		render(<Product book={book} cart={cart} />);
 		const bookPrice = screen.getByRole("heading", { level: 4 });
 		expect(bookPrice).toBeInTheDocument();
 	});
 
 	it("should render add to cart button", () => {
 		const btnLabel = ["-", "+"];
-		render(<Product book={book} />);
+		render(<Product book={book} cart={cart} />);
 		const btns = screen.getAllByRole("button");
 		btns.forEach((btn, index) => {
 			expect(btn).toBeInTheDocument();
@@ -57,8 +59,8 @@ describe("test cases for product component", () => {
 		});
 	});
 	it("should render book Quantity", () => {
-		render(<Product book={book} />);
-		const quantity = screen.getByRole("heading", { level: 6 });
+		render(<Product book={book} cart={cart} />);
+		const quantity = screen.getByRole("heading", { level: 3 });
 		expect(quantity).toBeInTheDocument();
 	});
 });
