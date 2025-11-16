@@ -7,8 +7,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 const App = () => {
 	return (
 		<>
-			<NavBar />
 			<BrowserRouter>
+				<NavBar />
 				<Routes>
 					<Route path="/" element={<ProductsList />} />
 					<Route path="/cart" element={<Cart cart={[]} />} />
