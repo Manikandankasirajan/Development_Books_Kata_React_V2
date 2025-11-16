@@ -4,6 +4,8 @@ import getCartDetails from "../../utils/getCartDetails";
 const Cart = ({ cart }) => {
 	const bookCount = cart.length;
 	const [bookTitleAndCount, priceAfterDiscount] = getCartDetails(cart);
+	const actualPrice = bookCount * 50;
+	const discountPrice = bookCount * 50 - priceAfterDiscount;
 
 	return (
 		<>
@@ -21,8 +23,8 @@ const Cart = ({ cart }) => {
 							);
 						})}
 					</ul>
-					<p>Actual Price : &#x20b9; {bookCount * 50}</p>
-					<p>Discount Price : &#x20b9; {bookCount * 50 - priceAfterDiscount}</p>
+					<p>Actual Price : &#x20b9; {actualPrice}</p>
+					<p>Discount Price : &#x20b9; {discountPrice}</p>
 					<p>Price After Discount : &#x20b9; {priceAfterDiscount}</p>
 				</div>
 			)}
