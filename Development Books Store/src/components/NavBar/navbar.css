@@ -1,0 +1,47 @@
+.navBar {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+	border-bottom: 2px solid black;
+}
+
+.navLogo {
+	text-decoration: none;
+	color: black;
+}
+
+.navLists {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-right: 25px;
+}
+
+.navListItems {
+	margin-left: 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cartQuantity {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: black;
+	color: white;
+	padding: 3px;
+	margin-left: 5px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.navLink {
+	text-decoration: none;
+	color: black;
+}
+
+.navLink:hover {
+	text-decoration: underline;
+}
