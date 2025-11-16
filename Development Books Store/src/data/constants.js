@@ -41,3 +41,5 @@ export const BOOK_LIST = [
 		imgSrc: "../src/assets/Kata_DevelopmentBooks_Refactoring.jpeg",
 	},
 ];
+
+export const DISCOUNT_RULE = { 1: 0, 2: 5, 3: 10, 4: 20, 5: 25 };
