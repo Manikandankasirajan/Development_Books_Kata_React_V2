@@ -21,6 +21,7 @@ const Cart = ({ cart }) => {
 							);
 						})}
 					</ul>
+					<p>Actual Price : &#x20b9; {bookCount * 50}</p>
 				</div>
 			)}
 		</>
